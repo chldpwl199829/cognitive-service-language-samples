@@ -1,0 +1,90 @@
+﻿{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Please select your job title."
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Maintainer"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Maintenance Planner"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Maintenance Manager"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Administrator"
+    }
+  ]
+}
+
+//{
+
+//  "type": "AdaptiveCard",
+
+//  "body": [
+
+//    {
+
+//      "type": "TextBlock",
+
+//      "size": "Medium",
+
+//      "weight": "Bolder"
+
+//    }
+
+//  ],
+
+//  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+
+//  "version": "1.0",
+
+//  "actions": [
+
+//    {
+
+//      "type": "Action.Submit",
+
+//      "title": "Maintainer"
+//    },
+
+//    {
+
+//      "type": "Action.Submit",
+
+//      "title": "Maintenance Planner"
+
+//    },
+
+//    {
+
+//      "type": "Action.Submit",
+
+//      "title": "Maintenance Manager"
+
+//    },
+
+//    {
+
+//      "type": "Action.Submit",
+
+//      "title": "Administrator"
+
+//    }
+
+//  ]
+
+//}

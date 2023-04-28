@@ -2,9 +2,10 @@
 // Licensed under the MIT License.
 
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.CognitiveServices.ContentModerator.Models;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.BotBuilderSamples;
 namespace Microsoft.BotBuilderSamples
 {
     public class Program

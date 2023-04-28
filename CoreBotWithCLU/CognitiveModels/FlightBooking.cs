@@ -17,9 +17,9 @@ namespace Microsoft.BotBuilderSamples
     {
         public enum Intent
         {
-            BookFlight,
-            Cancel,
-            GetWeather,
+            EffectiveDate,
+            FileName,
+            Issue,
             None
         }
 
@@ -65,17 +65,43 @@ namespace Microsoft.BotBuilderSamples
         {
             public CluEntity[] Entities;
 
-            public CluEntity[] GetFromCityList() => Entities.Where(e => e.Category == "fromCity").ToArray();
+            public CluEntity[] GetActionList() => Entities.Where(e => e.Category == "Action").ToArray();
 
-            public CluEntity[] GetToCityList() => Entities.Where(e => e.Category == "toCity").ToArray();
+            public CluEntity[] GetADReferenceNumberList() => Entities.Where(e => e.Category == "ADReferenceNumber").ToArray();
 
-            public CluEntity[] GetFlightDateList() => Entities.Where(e => e.Category == "flightDate").ToArray();
+            public CluEntity[] GetADTitleList() => Entities.Where(e => e.Category == "ADTitle").ToArray();
 
-            public string GetFromCity() => GetFromCityList().FirstOrDefault()?.Text;
+            public CluEntity[] GetAircraftSerialNumberList() => Entities.Where(e => e.Category == "AircraftSerialNumber").ToArray();
 
-            public string GetToCity() => GetToCityList().FirstOrDefault()?.Text;
+            public CluEntity[] GetAircraftTypeList() => Entities.Where(e => e.Category == "AircraftType").ToArray();
+            
+            public CluEntity[] GetEffectiveDateList() => Entities.Where(e => e.Category == "EffectiveDate").ToArray();
+            
+            public CluEntity[] GetFileNameList() => Entities.Where(e => e.Category == "FileName").ToArray();
+            
+            public CluEntity[] GetHolderList() => Entities.Where(e => e.Category == "Holder").ToArray();
 
-            public string GetFlightDate() => GetFlightDateList().FirstOrDefault()?.Text;
+            public CluEntity[] GetProblemList() => Entities.Where(e => e.Category == "Problem").ToArray();
+
+            public string GetAction() => GetActionList().FirstOrDefault()?.Text;
+
+            public string GetADReferenceNumber() => GetADReferenceNumberList().FirstOrDefault()?.Text;
+
+            public string GetADTitle() => GetADTitleList().FirstOrDefault()?.Text;
+
+            public string GetAircraftSerialNumber() => GetAircraftSerialNumberList().FirstOrDefault()?.Text;
+
+
+            public string GetAircraftType() => GetAircraftTypeList().FirstOrDefault()?.Text;
+
+            public string GetEffectiveDate() => GetEffectiveDateList().FirstOrDefault()?.Text;
+
+            public string GetFileName() => GetFileNameList().FirstOrDefault()?.Text;
+
+            public string GetHolder() => GetHolderList().FirstOrDefault()?.Text;
+
+            public string GetProblem() => GetProblemList().FirstOrDefault()?.Text;
+
         }
     }
 }

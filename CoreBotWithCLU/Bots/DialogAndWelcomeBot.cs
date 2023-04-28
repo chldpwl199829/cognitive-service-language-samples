@@ -57,3 +57,66 @@ namespace Microsoft.BotBuilderSamples.Bots
         }
     }
 }
+
+
+
+//using System.Collections.Generic;
+//using System.Threading;
+//using System.Threading.Tasks;
+//using Microsoft.Bot.Builder;
+//using Microsoft.Bot.Builder.Dialogs;
+//using Microsoft.Bot.Builder.Dialogs.Choices;
+
+//namespace MyBot.Dialogs
+//{
+//    public class WelcomeMessageDialog : ComponentDialog
+//    {
+//        private const string WelcomeMessage = "Welcome! Please select your job title:";
+//        private const string MaintainerOption = "Maintainer";
+//        private const string PlannerOption = "Planner";
+//        private const string ManagerOption = "Manager";
+//        private const string AdministratorOption = "Administrator";
+//        private const string JobTitlePrompt = "jobTitlePrompt";
+
+//        public WelcomeMessageDialog()
+//            : base(nameof(WelcomeMessageDialog))
+//        {
+//            AddDialog(new ChoicePrompt(JobTitlePrompt));
+//            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+//            {
+//                ShowWelcomeMessageStepAsync,
+//                GetJobTitleStepAsync,
+//                ShowSelectedJobTitleStepAsync,
+//            }));
+
+//            InitialDialogId = nameof(WaterfallDialog);
+//        }
+
+//        private async Task<DialogTurnResult> ShowWelcomeMessageStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+//        {
+//            await stepContext.Context.SendActivityAsync(MessageFactory.Text(WelcomeMessage), cancellationToken);
+//            return await stepContext.NextAsync(cancellationToken: cancellationToken);
+//        }
+
+//        private async Task<DialogTurnResult> GetJobTitleStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+//        {
+//            var promptOptions = new PromptOptions
+//            {
+//                Prompt = MessageFactory.Text("Please select your job title:"),
+//                RetryPrompt = MessageFactory.Text("I'm sorry, I didn't understand your selection. Please select your job title from the list."),
+//                Choices = ChoiceFactory.ToChoices(new List<string> { MaintainerOption, PlannerOption, ManagerOption, AdministratorOption }),
+//            };
+
+//            return await stepContext.PromptAsync(JobTitlePrompt, promptOptions, cancellationToken);
+//        }
+
+//        private async Task<DialogTurnResult> ShowSelectedJobTitleStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+//        {
+//            var jobTitle = ((FoundChoice)stepContext.Result).Value;
+
+//            await stepContext.Context.SendActivityAsync(MessageFactory.Text($"You've chosen '{jobTitle}'"), cancellationToken);
+
+//            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+//        }
+//    }
+//}

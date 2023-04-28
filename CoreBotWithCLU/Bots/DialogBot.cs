@@ -1,12 +1,14 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
+﻿
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using AdaptiveCards;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Microsoft.BotBuilderSamples.Bots
 {
@@ -42,10 +44,78 @@ namespace Microsoft.BotBuilderSamples.Bots
 
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            Logger.LogInformation("Running dialog with Message Activity.");
+            if (turnContext.Activity.Value != null)
+            {
+                var value = JsonConvert.DeserializeObject<dynamic>(turnContext.Activity.Value.ToString());
+                var selectedAnswer = (string)value["title"];
 
-            // Run the Dialog with the new message Activity.
-            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>("DialogState"), cancellationToken);
+                // Check the selected answer and print a message accordingly
+                switch (selectedAnswer)
+                {
+                    case "Maintainer":
+                        await turnContext.SendActivityAsync("You selected Maintainer. Please select what you want to get helped with. \n 1. Search AD \n2. View Analytics");
+                        break;
+                    case "Maintenance Planner":
+                        await turnContext.SendActivityAsync("You selected Maintenance Planner. Please select what you want to get helped with. \n 1. Search AD \n2. View Analytics");
+                        break;
+                    case "Maintenance Manager":
+                        await turnContext.SendActivityAsync("You selected Maintenance Manager. Please select what you want to get helped with. \n 1. Search AD \n2. View Analytics");
+                        break;
+                    case "Administrator":
+                        await turnContext.SendActivityAsync("You selected Maintenance Administrator. Please select what you want to get helped with. \n 1. Upload AD \n2. View Analytics");
+                        break;
+                    default:
+                        await turnContext.SendActivityAsync("Invalid selection.");
+                        break;
+                }
+            }
+            else
+            {
+                await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>("DialogState"), cancellationToken);
+            }
         }
+
     }
 }
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Linq;
+//using System.Threading;
+//using System.Threading.Tasks;
+//using Microsoft.Bot.Builder;
+//using Microsoft.Bot.Builder.Dialogs;
+//using Microsoft.Bot.Schema;
+//using Microsoft.Extensions.Logging;
+//using Newtonsoft.Json;
+//using Newtonsoft.Json.Linq;
+
+//namespace Microsoft.BotBuilderSamples.Bots
+//{
+//    public class DialogBot : ActivityHandler
+//    {
+//        private readonly DialogSet _dialogs;
+//        private readonly ILogger<DialogBot> _logger;
+
+//        public DialogBot(DialogSet dialogs, ILogger<DialogBot> logger)
+//        {
+//            _dialogs = dialogs;
+//            _logger = logger;
+//        }
+
+
+//        protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+//        {
+//            var messageText = turnContext.Activity.Text.ToLowerInvariant();
+
+//            if (messageText.Contains("maintainer") || messageText.Contains("maintenance planner") || messageText.Contains("maintenance manager") || messageText.Contains("administrator"))
+//            {
+//                await turnContext.SendActivityAsync($"You selected: {messageText}", cancellationToken: cancellationToken);
+//            }
+
+//            else
+//            {
+//                await turnContext.SendActivityAsync("Please select a valid job title.", cancellationToken: cancellationToken);
+//            }
+//        }
+//    }
+//}

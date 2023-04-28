@@ -1,0 +1,2439 @@
+{
+  "projectFileVersion": "2022-10-01-preview",
+  "stringIndexType": "Utf16CodeUnit",
+  "metadata": {
+    "projectKind": "Conversation",
+    "settings": {
+      "confidenceThreshold": 0
+    },
+    "projectName": "babcock",
+    "multilingual": false,
+    "description": "",
+    "language": "en-us"
+  },
+  "assets": {
+    "projectKind": "Conversation",
+    "intents": [
+      {
+        "category": "None"
+      },
+      {
+        "category": "EffectiveDate"
+      },
+      {
+        "category": "Issue"
+      },
+      {
+        "category": "FileName"
+      }
+    ],
+    "entities": [
+      {
+        "category": "FileName",
+        "compositionSetting": "combineComponents",
+        "list": {
+          "sublists": [
+            {
+              "listKey": "BAE 146-108",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "BAE 146-108",
+                    "bae 146-108",
+                    "BAe 146-108"
+                  ]
+                }
+              ]
+            },
+            {
+              "listKey": "JETSTREAM-108",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "JETSTREAM-108",
+                    "jetstream 108",
+                    "Jetstream 108",
+                    "JETSTREAM 108"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "regex": {
+          "expressions": [
+            {
+              "regexKey": "bae 146-107",
+              "language": "en-us",
+              "regexPattern": "bae [0-9]{3}-[0-9]{3}"
+            },
+            {
+              "regexKey": "jetstream-107",
+              "language": "en-us",
+              "regexPattern": "jetstream-[0-9]{3}"
+            },
+            {
+              "regexKey": "JETSTREAM-108",
+              "language": "en-us",
+              "regexPattern": "JETSTREAM-[0-9]{3}"
+            },
+            {
+              "regexKey": "BAE146-108",
+              "language": "en-us",
+              "regexPattern": "BAE [0-9]{3}-[0-9]{3}"
+            }
+          ]
+        },
+        "requiredComponents": [
+          "learned",
+          "list",
+          "regex"
+        ]
+      },
+      {
+        "category": "AircraftType",
+        "compositionSetting": "combineComponents",
+        "list": {
+          "sublists": [
+            {
+              "listKey": "British Aerospace BAe 3100 (Jetstream) Series Aeroplanes",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "British Aerospace BAe 3100 (Jetstream) Series Aeroplanes",
+                    "British Aerospace BAe 3100 (Jetstream) Series Aeroplane",
+                    "BAe 3100",
+                    "Jetstream 3100 Series",
+                    "3100 Jetstream",
+                    "BAe 3100 Jetstream",
+                    "BAe 3100 aircraft",
+                    "BAe3100",
+                    "Jetstream 3100",
+                    "BAE 3100 Jetstream",
+                    "BAE 3100"
+                  ]
+                }
+              ]
+            },
+            {
+              "listKey": "BAe Systems (Operations) BAe 146 and AVRO 146-RJ Series Aeroplanes",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "BAe Systems (Operations) BAe 146 and AVRO 146-RJ Series Aeroplanes",
+                    "BAe Systems (Operations) BAe 146 and AVRO 146-RJ Series Aeroplane",
+                    "BAe 146 and AVRO 146-RJ",
+                    "BAe 146 and AVRO 164-RJ Series",
+                    "BAe146 and AVRO 164 Series",
+                    "BAe 146",
+                    "AVRO 146",
+                    "AVRO 146-RJ",
+                    "BAe Systems (Operations) BAe 146 and AVRO 146-RJ Series"
+                  ]
+                }
+              ]
+            },
+            {
+              "listKey": "British Aerospace BAe 146 Series Aeroplanes",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "British Aerospace BAe 146 Series Aeroplanes",
+                    "BAe146",
+                    "BAe 146 Series",
+                    "BAe 146 aircraft",
+                    "BAe Systems (Operations) BAe 146",
+                    "British Aerospace BAe 146 Series Aeroplane"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "regex": {
+          "expressions": [
+            {
+              "regexKey": "BAe Systems (Operations) BAe 146 and AVRO 146-RJ Series ",
+              "language": "en-us",
+              "regexPattern": "BAe Systems (Operations) BAe [0-9]{3} and AVRO [0-9]{3}-RJ Series Aeroplanes"
+            },
+            {
+              "regexKey": "BAe 146 Series ",
+              "language": "en-us",
+              "regexPattern": "British Aerospace BAe [0-9]{2} Series Aeroplanes"
+            },
+            {
+              "regexKey": " BAe 3100",
+              "language": "en-us",
+              "regexPattern": "BAe [0-9]{4}"
+            },
+            {
+              "regexKey": "BAe (Operations) Jetstream 3100 and 3200 Series",
+              "language": "en-us",
+              "regexPattern": "BAe Systems (Operations) Jetstream [0-9]{4} and [0-9]{4} Series"
+            },
+            {
+              "regexKey": "BAe 3100 (Jetstream) Series",
+              "language": "en-us",
+              "regexPattern": "British Aerospace BAe [0-9]{4} (Jetstream) Series Aeroplanes"
+            }
+          ]
+        },
+        "requiredComponents": [
+          "learned",
+          "list",
+          "regex"
+        ]
+      },
+      {
+        "category": "ADReferenceNumber",
+        "compositionSetting": "combineComponents",
+        "regex": {
+          "expressions": [
+            {
+              "regexKey": "AD/BAe 146/112",
+              "language": "en-us",
+              "regexPattern": "AD/BAe 146/[0-9]{3}"
+            },
+            {
+              "regexKey": "AD/BAe 146/13 Amdt 1",
+              "language": "en-us",
+              "regexPattern": "AD/BAe 146/[0-9]{2} Amdt [0-9]{1}"
+            },
+            {
+              "regexKey": "AD/BAe 146/137 Amdt 1",
+              "language": "en-us",
+              "regexPattern": "AD/BAe 146/[0-9]{3} Amdt [0-9]{1}"
+            },
+            {
+              "regexKey": "AD/JETSTREAM/4",
+              "language": "en-us",
+              "regexPattern": "AD/JETSTREAM/[0-9]{1}"
+            },
+            {
+              "regexKey": "AD/JETSTREAM/89",
+              "language": "en-us",
+              "regexPattern": "AD/JETSTREAM/[0-9]{2}"
+            },
+            {
+              "regexKey": "AD/JETSTREAM/109",
+              "language": "en-us",
+              "regexPattern": "AD/JETSTREAM/[0-9]{3}"
+            }
+          ]
+        },
+        "requiredComponents": [
+          "regex"
+        ]
+      },
+      {
+        "category": "ADTitle",
+        "compositionSetting": "combineComponents",
+        "requiredComponents": [
+          "learned"
+        ]
+      },
+      {
+        "category": "AircraftSerialNumber",
+        "compositionSetting": "combineComponents",
+        "list": {
+          "sublists": [
+            {
+              "listKey": "Jetstream 3100",
+              "synonyms": [
+                {
+                  "language": "en-us",
+                  "values": [
+                    "Jetstream 3100",
+                    "All Jetstream 3100 series aircraft."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "prebuilts": [
+          {
+            "category": "Quantity.NumberRange"
+          }
+        ],
+        "requiredComponents": [
+          "learned",
+          "prebuilts"
+        ]
+      },
+      {
+        "category": "EffectiveDate",
+        "compositionSetting": "combineComponents",
+        "prebuilts": [
+          {
+            "category": "DateTime"
+          }
+        ],
+        "requiredComponents": [
+          "prebuilts"
+        ]
+      },
+      {
+        "category": "Action",
+        "compositionSetting": "combineComponents"
+      },
+      {
+        "category": "Problem",
+        "compositionSetting": "combineComponents",
+        "requiredComponents": [
+          "learned"
+        ]
+      },
+      {
+        "category": "Holder",
+        "compositionSetting": "combineComponents"
+      }
+    ],
+    "utterances": [
+      {
+        "text": "when did this AD become effective? JETSTREAM-003",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 35,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can u show me a list of issues with  BAe 3100,constructors numbers 601 to 695",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 37,
+            "length": 8
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 46,
+            "length": 31
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "how can i fix this British Aerospace BAe 3100 (Jetstream) Series Aeroplanes",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 19,
+            "length": 56
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can i see the file having issues with propeller ",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 38,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can i have a look the problem of British Aerospace BAe 3100",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 33,
+            "length": 26
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm searching for the requirements that pertain to the issue with aircraft serial numbers, Model 146 with series and constructors numbers listed in BAe 146 SB 28-18.. Can you help me find them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 91,
+            "length": 73
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What are the requirements for addressing the issue with aircraft serial numbers S/Nos 601 to 666, and how can I locate them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 80,
+            "length": 16
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need to find the requirements that are specific to the issue with aircraft serial numbers S/Nos 601 to 666. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 92,
+            "length": 16
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm looking for the requirements that are relevant to the issue with aircraft serial numbers S/Nos 601 to 666. Can you point me in the right direction?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 92,
+            "length": 17
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you guide me to the requirements that are specific to the issue with aircraft serial numbers S/Nos 601 to 666?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 99,
+            "length": 16
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you help me locate the requirements related to the issue with aircraft serial numbers S/Nos 601 to 666?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 90,
+            "length": 16
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you provide me with guidance on locating the requirements that apply to the BAe 3100 aircraft?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 80,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What are the requirements for the BAe 3100 and how can I find them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 34,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is there any way you can help me locate the requirements that apply to the BAe 3100?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 75,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you guide me to the requirements that are specific to the BAe 3100 aircraft?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 63,
+            "length": 9
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need some help finding the requirements related to the BAe 3100. Can you point me in the right direction?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 57,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you assist me in locating the requirements pertaining to the BAe 3100 aircraft?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 65,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm having trouble finding the requirements for the BAe 3100. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 52,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you provide me with guidance on locating the requirements that apply to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 80,
+            "length": 27
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm searching for the requirements that pertain to the BAe 3100 (Jetstream) Series Aeroplanes. Can you help me find them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 54,
+            "length": 39
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you assist me in finding the requirements that are applicable to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 75,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you direct me to the requirements that are relevant to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 63,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need some help in finding the requirements for the BAe 3100 (Jetstream) Series Aeroplanes. Can you please assist me?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 52,
+            "length": 39
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm trying to locate the requirements associated with the BAe 3100 (Jetstream) Series Aeroplanes. Can you provide me with any guidance on where to look?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 58,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you help me find the specific requirements that apply to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 64,
+            "length": 39
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What are the requirements for the BAe 3100 (Jetstream) Series Aeroplanes and how can I find them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 34,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I ask for assistance in finding the requirements relevant to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 69,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is there any way you can help me locate the requirements that apply to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 75,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm having trouble finding the requirements for the BAe 3100 (Jetstream) Series Aeroplanes. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 52,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you guide me to the requirements that are specific to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 64,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need some help finding the requirements related to the BAe 3100 (Jetstream) Series Aeroplanes. Can you point me in the right direction?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 56,
+            "length": 39
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you assist me in locating the requirements pertaining to the BAe 3100 (Jetstream) Series Aeroplanes?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 65,
+            "length": 38
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I require assistance in identifying the requirements associated with fuselage issues. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 69,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm searching for requirements related to fuselage issues. Would you be able to help me find them?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 42,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you point me in the right direction to find the requirements that concern fuselage issues?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 78,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need some guidance in finding the requirements that relate to fuselage issues. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 64,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you assist me in locating the requirements pertaining to fuselage issues?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 63,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What is the effective start date for AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 57,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is it possible to know the effective date of AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 65,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm trying to determine the effective date of AD reference number AD/JETSTREAM/40 Amdt 1. Could you help me with that?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 66,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you provide me with the date from which AD reference number AD/JETSTREAM/40 Amdt 1 becomes effective?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 64,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "When will AD reference number AD/JETSTREAM/40 Amdt 1 go into effect?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 30,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I request the effective date of AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 56,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you inform me of the effective date for AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 64,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What is the start date for AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 47,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need to know the effective date of AD reference number AD/JETSTREAM/40 Amdt 1. Could you assist me with that?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 57,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you tell me the date on which AD reference number AD/JETSTREAM/40 Amdt 1 becomes effective?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 56,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is there a specific date from which AD reference number AD/JETSTREAM/40 Amdt 1 takes effect?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 56,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I inquire about the effective date of AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 62,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "When does AD reference number AD/JETSTREAM/40 Amdt 1 become effective?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 30,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you provide me with the effective date of AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 68,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What is the effective date for AD reference number AD/JETSTREAM/40 Amdt 1?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 51,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm trying to determine the effective date for the AD/BAe 146/45. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 51,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you inform me of the date from which the AD/BAe 146/33 takes effect?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 47,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you give me the date on which the AD/JETSTREAM/2 becomes effective?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 38,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is it possible for me to find out the effective date of the AD/JETSTREAM/2?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 60,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need to know when the AD/JETSTREAM/2 becomes effective. Could you provide me with that information?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 24,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you let me know the effective date for AD/JETSTREAM/2?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "ADReferenceNumber",
+            "offset": 45,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm trying to determine the effective date for the BAE146-005 file. Can you help me with that?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 51,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you inform me of the date from which the BAE146-005 file takes effect?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 47,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I ask for the effective date of the BAE146-005 file?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 40,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you give me the date on which the BAE146-005 file becomes effective?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 38,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is it possible for me to find out the effective date of the BAE146-005 file?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 60,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need to know when the BAE146-005 file becomes effective. Could you provide me with that information?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 24,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you let me know the effective date for the BAE146-005 file?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 49,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I need to know the effective date of file JETSTREAM-044, could you please tell me?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 42,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I inquire about the effective date of the JETSTREAM-044 file?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 46,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Is it possible to check the effective date of file JETSTREAM-044?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 51,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I was wondering if you could provide me with the effective date of the JETSTREAM-044 file?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 71,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you tell me the effective date for file JETSTREAM-044?",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 46,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can I check the effective date for file JETSTREAM-044",
+        "language": "en-us",
+        "intent": "Effective_Date",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 40,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search for directives for Jetstream 3200 constructor number 968",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 26,
+            "length": 14
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 41,
+            "length": 22
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Open files BAE146-012 and BAE146-015",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 11,
+            "length": 10
+          },
+          {
+            "category": "FileName",
+            "offset": 26,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Open file BAE146-012",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 10,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Open BAE146-012",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 5,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "View BAE146-053",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 5,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "show me JETSTREAM-006 and  JETSTREAM-022",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 8,
+            "length": 13
+          },
+          {
+            "category": "FileName",
+            "offset": 27,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "show me JETSTREAM-006, JETSTREAM-022",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 8,
+            "length": 13
+          },
+          {
+            "category": "FileName",
+            "offset": 23,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I want to see JETSTREAM-014 and JETSTREAM-022",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 14,
+            "length": 13
+          },
+          {
+            "category": "FileName",
+            "offset": 32,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'm interested in viewing the JETSTRE-022 file. Could you assist me with that?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 30,
+            "length": 11
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "May I request to see the JETSTREAM-045 file?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 25,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you provide me access to the JETSTREAM-006 file for viewing?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 33,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I'd like to take a look at the JETSTREAM-107 file, is that possible?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 31,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you please show me the JETSTREAM-014 file?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 29,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I want to view JETSTREAM-001 file",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "FileName",
+            "offset": 15,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Locate documents that describe difficulties or faults with the doors of BAe 146 aircraft produced by British Aerospace.",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 63,
+            "length": 5
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 72,
+            "length": 16
+          },
+          {
+            "category": "AircraftType",
+            "offset": 101,
+            "length": 17
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Find any files that mention problems or malfunctions with the doors of British Aerospace BAe 146 Series planes.",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 62,
+            "length": 4
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 71,
+            "length": 32
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search for documents that discuss issues with the doors of BAe 146 planes manufactured by British Aerospace.",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 50,
+            "length": 4
+          },
+          {
+            "category": "AircraftType",
+            "offset": 59,
+            "length": 7
+          },
+          {
+            "category": "Holder",
+            "offset": 90,
+            "length": 17
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Look for files containing problems related to the doors on British Aerospace BAe 146 Series aircraft.",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 50,
+            "length": 4
+          },
+          {
+            "category": "Holder",
+            "offset": 59,
+            "length": 18
+          },
+          {
+            "category": "AircraftType",
+            "offset": 77,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search files having issues with door for British Aerospace BAe 146 Series Aeroplanes",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 32,
+            "length": 4
+          },
+          {
+            "category": "AircraftType",
+            "offset": 41,
+            "length": 43
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search files having issues with cylinder for Jetstream 3200 Aircraft",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 32,
+            "length": 8
+          },
+          {
+            "category": "AircraftType",
+            "offset": 45,
+            "length": 23
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search files having issues with any door for all models",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 36,
+            "length": 4
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search files having issues with any spring for all models",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 36,
+            "length": 6
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search documents having issues with any spring for all models",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 40,
+            "length": 6
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search elevator spring issues for Jetstream models",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 16,
+            "length": 6
+          },
+          {
+            "category": "Holder",
+            "offset": 34,
+            "length": 9
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can i get a list of documents of landing gear issue for all series models?",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 33,
+            "length": 12
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can i get a list of pdfs of fuselage issue for all models?",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 28,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "What is the name of the file for the elevator spring issue?",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 37,
+            "length": 15
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search detachment of elevator spring",
+        "language": "en-us",
+        "intent": "File_name",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 21,
+            "length": 15
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you find me any information on ADs related to fuel system issues in any Jetstream models?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 52,
+            "length": 11
+          },
+          {
+            "category": "Holder",
+            "offset": 78,
+            "length": 9
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Please search for any Airworthiness Directives (ADs) related to engine problems in the  BAe 146-100 or -100A series.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 64,
+            "length": 6
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 87,
+            "length": 28
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "help me find Airworthiness Directives (ADs) related to fuselage issues?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 55,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can you find me ADs having issues with their doors",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 45,
+            "length": 5
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Can I see the landing gear issues ADs for all series models.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 14,
+            "length": 12
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 42,
+            "length": 17
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I got Jetstream 84,  3200 series aircraft. can you search for the issues related to their Landing Gear.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 6,
+            "length": 12
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 21,
+            "length": 20
+          },
+          {
+            "category": "ADTitle",
+            "offset": 90,
+            "length": 12
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can you check if there’s been any Nose Landing Gear issues from All British Aerospace models?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 34,
+            "length": 17
+          },
+          {
+            "category": "AircraftType",
+            "offset": 64,
+            "length": 28
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can you check if there’s been any cylinder issues from Jetstream 3100 and 3200?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 34,
+            "length": 8
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 55,
+            "length": 23
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Could you please check if there are any issues related to the gears of BAe 3100 Jetstream S.B. 57-A-JA840917 ?",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 61,
+            "length": 6
+          },
+          {
+            "category": "AircraftType",
+            "offset": 71,
+            "length": 18
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 90,
+            "length": 18
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": " I’m working with BAe 3100 jetstream. Its serial number is S.B. 57-A-JA840917 aircraft. Can you look for the wing issues documents",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 18,
+            "length": 18
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 58,
+            "length": 28
+          },
+          {
+            "category": "ADTitle",
+            "offset": 109,
+            "length": 4
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "I got BAe 3100 jetstream, S.B. 57-A-JA840917. can you search for the issues related to their wings",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 6,
+            "length": 18
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 26,
+            "length": 18
+          },
+          {
+            "category": "ADTitle",
+            "offset": 93,
+            "length": 5
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Explore the issue of evacuation slide malfunction across all BAe 146 and Avro 146-RJ Series aircraft.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 21,
+            "length": 28
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 57,
+            "length": 43
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Research any problems with evacuation slides across all BAe 146 and Avro 146-RJ Series airplanes.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 27,
+            "length": 17
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 52,
+            "length": 45
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Look into the problems associated with Air Cruisers evacuation slides on Series 100 and 100A planes up to and including E1017, and Series 200 and 200A planes up to and including E2048.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 39,
+            "length": 30
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 73,
+            "length": 110
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the issue with Air Cruisers evacuation slides on Series 100 and 100A aircraft up to and including E1017, and Series 200 and 200A aircraft up to and including E2048.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 27,
+            "length": 30
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 61,
+            "length": 115
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Research the effectiveness of the propeller ice and rain protection mechanisms implemented on all Jetstream Series aircraft.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 13,
+            "length": 54
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 94,
+            "length": 29
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the ice and rain protection system for propellers on all Jetstream Series aircraft.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 11,
+            "length": 35
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 65,
+            "length": 29
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "search Air Cruisers Evacuation Slide issue for Series 100 and 100A; up to and including E1017 and Series 200 and 200A; up to and including E2048",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 29
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 46,
+            "length": 98
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search MLG Shock Absorber - Lower Attachment Pin for SB 32-A6",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 41
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 53,
+            "length": 8
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Lower Wing Skin case for Model 146 ",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 15
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 32,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Evacuation Slide issue for all Series BAe 146 and Avro 146-RJ",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 16
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 34,
+            "length": 34
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Steering Ring Cuff Nut, for all models",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 22
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 35,
+            "length": 10
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Propeller Ice and Rain Protection, for all Jetstream Series",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 33
+          },
+          {
+            "category": "AircraftSerialNumber",
+            "offset": 46,
+            "length": 20
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the attachment fittings for the rear spar root joint at Wing Rib 2 on BAe 146 and AVRO 146-RJ series airplanes.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 16,
+            "length": 48
+          },
+          {
+            "category": "Problem",
+            "offset": 68,
+            "length": 10
+          },
+          {
+            "category": "AircraftType",
+            "offset": 82,
+            "length": 40
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Rear Spar Root Joint Attach Fittings at Wing Rib 2, for BAe 146 and AVRO 146-RJ Series Aeroplanes",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 50
+          },
+          {
+            "category": "AircraftType",
+            "offset": 59,
+            "length": 45
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the issue with the lower wing skin on BAe 146 series airplanes",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 31,
+            "length": 15
+          },
+          {
+            "category": "AircraftType",
+            "offset": 50,
+            "length": 24
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Lower Wing Skin issue, for BAe 146 Series Aeroplanes",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 21
+          },
+          {
+            "category": "AircraftType",
+            "offset": 34,
+            "length": 25
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Look into the problem related to the lower wing skin on BAe 146 series airplanes.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 37,
+            "length": 15
+          },
+          {
+            "category": "AircraftType",
+            "offset": 56,
+            "length": 25
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the stall identification and warning system on BAe 146 series airplanes",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 16,
+            "length": 39
+          },
+          {
+            "category": "AircraftType",
+            "offset": 59,
+            "length": 24
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can you search for the documents of Stall Ident and Warning, for BAe 146 Series",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 36,
+            "length": 23
+          },
+          {
+            "category": "AircraftType",
+            "offset": 65,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can i see the documents related to Air Cruisers Evacuation Slide/Slide Raft, for all aircrafts",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 35,
+            "length": 40
+          },
+          {
+            "category": "AircraftType",
+            "offset": 81,
+            "length": 13
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "can i see the documents related to Air Cruisers Evacuation Slide/Slide Raft, for BAe 146",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 35,
+            "length": 40
+          },
+          {
+            "category": "AircraftType",
+            "offset": 81,
+            "length": 7
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Examine the measures in place for protecting Jetstream Series 3100 aircraft propellers from ice and rain.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "AircraftType",
+            "offset": 45,
+            "length": 22
+          },
+          {
+            "category": "ADTitle",
+            "offset": 67,
+            "length": 37
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Look into the propeller ice and rain protection mechanisms for Jetstream Series 3100 aircraft.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 10,
+            "length": 37
+          },
+          {
+            "category": "AircraftType",
+            "offset": 63,
+            "length": 30
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the ice and rain protection system for the propellers on Jetstream Series 3100 aircraft.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 16,
+            "length": 31
+          },
+          {
+            "category": "AircraftType",
+            "offset": 69,
+            "length": 30
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search Propeller Ice and Rain Protection, for Jetstream Series 3100 aircraft",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 33
+          },
+          {
+            "category": "AircraftType",
+            "offset": 46,
+            "length": 30
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Examine the angle cracking occurring at Wing Rib 36 on Jetstream 3100.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 12,
+            "length": 39
+          },
+          {
+            "category": "AircraftType",
+            "offset": 55,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Research the occurrence of angle cracking at Wing Rib 36 for Jetstream 3100.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 27,
+            "length": 29
+          },
+          {
+            "category": "AircraftType",
+            "offset": 61,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Explore the issue of angle cracking on Wing Rib 36 for Jetstream 3100.",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 21,
+            "length": 29
+          },
+          {
+            "category": "AircraftType",
+            "offset": 55,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Look into the cracking of the angle at Wing Rib 36 for Jetstream 3100",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 14,
+            "length": 36
+          },
+          {
+            "category": "AircraftType",
+            "offset": 55,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Investigate the angle cracking on Wing Rib 36 of Jetstream 3100",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 16,
+            "length": 29
+          },
+          {
+            "category": "AircraftType",
+            "offset": 49,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      },
+      {
+        "text": "Search cracking of angle at Wing Rib 36, for Jetstream 3100",
+        "language": "en-us",
+        "intent": "Issue",
+        "entities": [
+          {
+            "category": "ADTitle",
+            "offset": 7,
+            "length": 32
+          },
+          {
+            "category": "AircraftType",
+            "offset": 45,
+            "length": 14
+          }
+        ],
+        "dataset": "Train"
+      }
+    ]
+  }
+}

@@ -13,8 +13,8 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 {
     public class DateResolverDialog : CancelAndHelpDialog
     {
-        private const string PromptMsgText = "When would you like to travel?";
-        private const string RepromptMsgText = "I'm sorry, to make your booking please enter a full travel date including Day Month and Year.";
+        private const string PromptMsgText = "Could you please provide the Effective date of the document you are searching for?";
+        private const string RepromptMsgText = "I'm sorry, to search for the correct information please enter a full effective date including Day Month and Year.";
 
         public DateResolverDialog(string id = null)
             : base(id ?? nameof(DateResolverDialog))
